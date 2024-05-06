@@ -1,0 +1,16 @@
+.home-content {
+  display: grid;
+  margin: 4em auto;
+  justify-items: center;
+  width: 80%;
+  text-align: center;
+  h1 {
+    font-weight: 700;
+  }
+  ion-card-content {
+    display: grid;
+    img {
+      width: 100%;
+    }
+  }
+}

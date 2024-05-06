@@ -1,0 +1,14 @@
+<ion-backdrop [visible]="true"></ion-backdrop>
+<div id="box">
+  <section class="background">
+    <img src="assets/loader/{{getCurrentImage()}}" class="background__item" [@fadeInOut]="currentImageIndex">
+  </section>
+  <section class="loader">
+    <div class="loader__description" [@fadeInOut]="currentImageIndex">
+      {{ getCurrentText() }}
+    </div>
+    <div class="loader__loading">
+      <span class="loading-text">Preparando...</span>
+    </div>
+  </section>
+</div>

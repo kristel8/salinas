@@ -1,0 +1,82 @@
+ion-backdrop {
+  opacity: 0.9;
+  background: #000;
+}
+
+#box {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  display: grid;
+  background: var(--ion-background-color, #fff);
+  width: 100%;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+.background {
+  width: 100%;
+  position: relative;
+  height: 70vh;
+  top: 0;
+  display: grid;
+  background-image: url("/assets/loader/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__item {
+    width: 60%;
+    align-self: baseline;
+    height: 80vh;
+    @media (max-width: 1024px) {
+      min-width: 22em;
+    }
+
+    @media (max-width: 280px) {
+      min-width: 18em;
+    }
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    justify-content: right;
+  }
+
+  &__description {
+    width: 100%;
+    bottom: 3em;
+    font-weight: 700;
+    font-size: large;
+    text-align: center;
+    font-style: italic;
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    .loading-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      animation: bounce 1s infinite alternate;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
